@@ -44,7 +44,12 @@ python3 scripts/scan_match_orders.py \
   --selector 0x627cdcb9
 ```
 
-6. (Optional) Re-fetch verified source for the live incident module:
+6. Run defensive PoC (proves nonce-mismatch root-cause + state desync):
+```bash
+python3 scripts/poc_desync_nonce_revert.py
+```
+
+7. (Optional) Re-fetch verified source for the live incident module:
 ```bash
 python3 scripts/fetch_polygonscan_verified_source.py \
   --address 0xb768891e3130f6df18214ac804d4db76c2c37730 \
@@ -65,3 +70,4 @@ python3 scripts/fetch_polygonscan_verified_source.py \
 - This is detection/forensics-focused. It does not include exploit execution instructions.
 - Some social-reported tx hashes were not found on-chain and are marked unverified in `CONTEXT.md`.
 - Nonce-mismatch decode data is precomputed in `data/failed_nonce_mismatch_analysis.json`.
+- `scripts/poc_desync_nonce_revert.py` is a read-only defensive reproduction, not an exploit script.
