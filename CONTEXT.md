@@ -208,7 +208,7 @@ Nonce-desync corroboration:
 - Confirmed: 3 successful `incrementNonce()` txs in-window align with repeated nonce-mismatch failures.
 - Confirmed: `15/16` failed `matchOrders` txs in this window include at least one nonce mismatch.
 - Unverified: several socially-circulated tx hashes from secondary posts were not found on-chain.
-- Open item: `1/16` failed `matchOrders` txs in-window did not show a nonce mismatch in decoded fields (possible alternate revert reason).
+- Confirmed outlier: `1/16` failed `matchOrders` txs in-window is not nonce-related and reverts with `TRANSFER_FROM_FAILED` (`ERC20: transfer amount exceeds balance`) on collateral transfer path.
 
 ## Source Index
 See:

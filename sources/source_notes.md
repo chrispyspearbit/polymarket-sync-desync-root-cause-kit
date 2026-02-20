@@ -71,6 +71,9 @@
 - Example set from reposted articles: `0x45fd95...`, `0xfb97e3...`, `0x625bbd...`, `0xb03bec...`, `0xa51c6c...`
 - Treat as unverified until confirmed on-chain.
 
-2. One reverted tx in the 16-tx failed cluster does not show a nonce mismatch in decoded order fields.
+2. One reverted tx in the 16-tx failed cluster is not nonce-related.
 - Tx: `0x1a031c5a951bf14df4f3b65d1d76e034aeb3f56a7fd970b01a835150a7f94742`
-- Likely a different revert reason; needs trace-level decode to classify.
+- Trace decode (`debug_traceTransaction`, `callTracer`) shows:
+  - top-level revert reason: `TRANSFER_FROM_FAILED`
+  - nested revert reason (USDC transfer): `ERC20: transfer amount exceeds balance`
+- This classifies the outlier as balance/transfer failure, not nonce mismatch.
