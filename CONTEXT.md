@@ -46,6 +46,30 @@ If an off-chain component marks orders as executed before final chain confirmati
 - Source URL: `https://polymarket.com/@0x6E7E227507569cAead21e5Cd32420197a6297282-1771437664429?via=history`
 - Contains 30 activity tx hashes extracted from profile page `__NEXT_DATA__`.
 
+### 4) Nonce-mismatch decode across failed tx corpus
+- Data file: `data/failed_nonce_mismatch_analysis.json`
+- Result: **15 / 16** reverted `matchOrders` txs include at least one stale order nonce (`order.nonce != nonces[maker]` at that block).
+- Anchor tx decode (`0xccba...`) shows:
+  - maker: `0x437eda540441a17af77852a9bb5f283682d02d3b`
+  - maker order nonce in calldata: `0`
+  - on-chain nonce at block `83173568`: `1`
+  - nonce check fails (`InvalidNonce` path in exchange validation).
+
+### 5) Direct `incrementNonce()` activity in same block window
+- Data file: `data/increment_nonce_calls_block_83173550_83173620.json`
+- Function selector: `0x627cdcb9` (`incrementNonce()`)
+- Confirmed successful nonce bumps on `NegRiskCTFExchange (0xc5d...)`:
+  - `0x793ca7ccd0394a287259b873137888d88fc0a13b8074101df1c1c42bc70c16ac` (block `83173551`, from `0x8cb943...`)
+  - `0xfa4c8ac2a7d8b59d118f5266c93a3a3f10a597e7de164c6c4a7e932bdfcd9876` (block `83173566`, from `0x437eda...`)
+  - `0xc57d75fc86112338bf1c83b91da0eabd2369158e2240c1393ef803a0b8e85b68` (block `83173580`, from `0x13078c...`)
+
+### 6) Causality chain for anchor failure (fully on-chain)
+1. `0xfa4c8ac2...` calls `incrementNonce()` for `0x437eda...` at block `83173566` (status `1`).
+2. By block `83173568`, on-chain `nonces(0x437eda...) == 1`.
+3. Anchor tx `0xccba...` (block `83173568`) includes maker order from `0x437eda...` with nonce `0`.
+4. Exchange validation enforces equality (`isValidNonce`), so `matchOrders` reverts.
+5. This proves stale order replay/match against advanced nonce state at settlement time.
+
 ## Addresses to Track
 - Suspected attacker profile proxy wallet: `0x6e7e227507569caead21e5cd32420197a6297282`
 - Failed tx sender (anchor): `0xcf7f5083a0fcd7a3eba791514e6f8fae1b73f26a`
@@ -111,16 +135,45 @@ python3 scripts/extract_polymarket_profile_activity.py \
   --profile-url 'https://polymarket.com/@0x6E7E227507569cAead21e5Cd32420197a6297282-1771437664429?via=history'
 ```
 
+5. Scan nonce-bump calls in same incident window (`incrementNonce` on `0xc5d...`):
+```bash
+python3 scripts/scan_match_orders.py \
+  --start-block 83173550 \
+  --end-block 83173620 \
+  --contract 0xc5d563a36ae78145c45a50134d48a1215220f80a \
+  --selector 0x627cdcb9
+```
+
+6. Prove nonce state changed before a failed settle (anchor maker `0x437eda...`):
+```bash
+cast call 0xc5d563a36ae78145c45a50134d48a1215220f80a "nonces(address)(uint256)" \
+  0x437eda540441a17af77852a9bb5f283682d02d3b \
+  --rpc-url https://polygon.drpc.org --block 83173565
+
+cast call 0xc5d563a36ae78145c45a50134d48a1215220f80a "nonces(address)(uint256)" \
+  0x437eda540441a17af77852a9bb5f283682d02d3b \
+  --rpc-url https://polygon.drpc.org --block 83173566
+
+cast call 0xc5d563a36ae78145c45a50134d48a1215220f80a "nonces(address)(uint256)" \
+  0x437eda540441a17af77852a9bb5f283682d02d3b \
+  --rpc-url https://polygon.drpc.org --block 83173568
+```
+
 ## Option B: Raw JSON-RPC methods
 Use Polygon RPC:
 - `eth_getTransactionByHash`
 - `eth_getTransactionReceipt`
 - `eth_getBlockByNumber`
+- `eth_call` (for `nonces(address)` at historical block tags)
 
 Minimal detection condition per tx:
 - `to == 0xb768891e3130f6df18214ac804d4db76c2c37730`
 - `input[:10] == 0x2287e350`
 - `receipt.status == 0`
+
+Nonce-desync corroboration:
+- `to == 0xc5d563a36ae78145c45a50134d48a1215220f80a` and `input[:10] == 0x627cdcb9` in nearby blocks
+- at failed match block, at least one decoded order maker has `order.nonce != nonces(maker)`
 
 ## What To Feed Your Scanner (minimum viable input pack)
 
@@ -134,6 +187,8 @@ Minimal detection condition per tx:
 3. **Tx corpus**
 - Known failed tx set (`data/failed_match_orders_block_83173550_83173620.json`)
 - Sender sequence (`data/cf7f_sender_sequence_block_83173550_83173620.json`)
+- Nonce-bump call set (`data/increment_nonce_calls_block_83173550_83173620.json`)
+- Nonce mismatch decode set (`data/failed_nonce_mismatch_analysis.json`)
 - Key tx list (`data/key_txs.txt`, `data/key_tx_details.json`)
 
 4. **Off-chain context**
@@ -144,11 +199,16 @@ Minimal detection condition per tx:
 - Off-chain “executed” records present while chain settlement tx status is `0`
 - Burst of `matchOrders` reverts in narrow block windows
 - Nonce-adjacent tx sequences with isolated reverts
+- Successful `incrementNonce()` txs by participants immediately preceding failed `matchOrders`
+- Reverted `matchOrders` where decoded maker/taker order nonces are stale vs historical `nonces(address)`
 
 ## Caveats / Confidence Flags
 - Confirmed: the anchor failed tx and failed-window scan data in this repo.
 - Confirmed: nonce and order-validation logic in included contract source.
+- Confirmed: 3 successful `incrementNonce()` txs in-window align with repeated nonce-mismatch failures.
+- Confirmed: `15/16` failed `matchOrders` txs in this window include at least one nonce mismatch.
 - Unverified: several socially-circulated tx hashes from secondary posts were not found on-chain.
+- Open item: `1/16` failed `matchOrders` txs in-window did not show a nonce mismatch in decoded fields (possible alternate revert reason).
 
 ## Source Index
 See:

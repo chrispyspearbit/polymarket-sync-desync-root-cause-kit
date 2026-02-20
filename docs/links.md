@@ -18,6 +18,10 @@
   https://polygonscan.com/tx/0xe3e755e169acfe561a0cf17573853d53a0bcd3fa916179b8baa11c2aa2229cc4
   https://polygonscan.com/tx/0xf07642b3acba1ca9901a188c3043eba796574b4d60e3c6268109a39108aeff2c
   https://polygonscan.com/tx/0xae99f63182570065bf2c72742bafa1be040d3a448842b390948977b4cac63a20
+- In-window `incrementNonce()` confirmations (`0xc5d...`, selector `0x627cdcb9`):
+  https://polygonscan.com/tx/0x793ca7ccd0394a287259b873137888d88fc0a13b8074101df1c1c42bc70c16ac
+  https://polygonscan.com/tx/0xfa4c8ac2a7d8b59d118f5266c93a3a3f10a597e7de164c6c4a7e932bdfcd9876
+  https://polygonscan.com/tx/0xc57d75fc86112338bf1c83b91da0eabd2369158e2240c1393ef803a0b8e85b68
 
 ## Social/reporting context
 - X post (itslirrato): https://x.com/itslirrato/status/2024444009851072961

@@ -30,6 +30,31 @@
 - Profile URL in data extraction script and `docs/links.md`
 - Dataset: `data/profile_activity_0x6e7e.json`
 
+8. Direct nonce-desync proof in incident window:
+- Dataset: `data/failed_nonce_mismatch_analysis.json`
+- In-window failed `matchOrders`: `16`
+- With at least one decoded nonce mismatch: `15`
+- Recurring mismatch addresses:
+  - `0x437eda540441a17af77852a9bb5f283682d02d3b` (7 txs)
+  - `0x13078c4e7f32f8d8272030d1ad1cd7c362c13b7e` (5 txs)
+  - `0x8cb943c4fa3052d9ba077d85c8527565be501f6a` (3 txs)
+
+9. Same-window successful `incrementNonce()` calls on `NegRiskCTFExchange (0xc5d...)`:
+- Dataset: `data/increment_nonce_calls_block_83173550_83173620.json`
+- Txs:
+  - `0x793ca7ccd0394a287259b873137888d88fc0a13b8074101df1c1c42bc70c16ac` (`0x8cb943...`)
+  - `0xfa4c8ac2a7d8b59d118f5266c93a3a3f10a597e7de164c6c4a7e932bdfcd9876` (`0x437eda...`)
+  - `0xc57d75fc86112338bf1c83b91da0eabd2369158e2240c1393ef803a0b8e85b68` (`0x13078c...`)
+- Selector cross-check: `incrementNonce()` => `0x627cdcb9`
+
+10. Anchor-level nonce transition is directly observable on-chain.
+- Address: `0x437eda540441a17af77852a9bb5f283682d02d3b`
+- `nonces(address)` on `0xc5d...`:
+  - block `83173565` => `0`
+  - block `83173566` => `1`
+  - block `83173568` => `1`
+- Failed anchor tx `0xccba...` at block `83173568` includes maker order nonce `0` for this address in decoded calldata.
+
 ## Medium-confidence (social / secondary reporting)
 
 1. Public social claim thread with exploit narrative:
@@ -45,3 +70,7 @@
 1. Some socially-circulated tx hashes were not found via `eth_getTransactionByHash`.
 - Example set from reposted articles: `0x45fd95...`, `0xfb97e3...`, `0x625bbd...`, `0xb03bec...`, `0xa51c6c...`
 - Treat as unverified until confirmed on-chain.
+
+2. One reverted tx in the 16-tx failed cluster does not show a nonce mismatch in decoded order fields.
+- Tx: `0x1a031c5a951bf14df4f3b65d1d76e034aeb3f56a7fd970b01a835150a7f94742`
+- Likely a different revert reason; needs trace-level decode to classify.

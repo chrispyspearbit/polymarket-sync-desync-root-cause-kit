@@ -35,7 +35,16 @@ python3 scripts/scan_match_orders.py \
 python3 scripts/inspect_txs.py --tx-file data/key_txs.txt
 ```
 
-5. (Optional) Re-fetch verified source for the live incident module:
+5. Scan `incrementNonce()` calls in the same window (selector `0x627cdcb9`):
+```bash
+python3 scripts/scan_match_orders.py \
+  --start-block 83173550 \
+  --end-block 83173620 \
+  --contract 0xc5d563a36ae78145c45a50134d48a1215220f80a \
+  --selector 0x627cdcb9
+```
+
+6. (Optional) Re-fetch verified source for the live incident module:
 ```bash
 python3 scripts/fetch_polygonscan_verified_source.py \
   --address 0xb768891e3130f6df18214ac804d4db76c2c37730 \
@@ -55,3 +64,4 @@ python3 scripts/fetch_polygonscan_verified_source.py \
 
 - This is detection/forensics-focused. It does not include exploit execution instructions.
 - Some social-reported tx hashes were not found on-chain and are marked unverified in `CONTEXT.md`.
+- Nonce-mismatch decode data is precomputed in `data/failed_nonce_mismatch_analysis.json`.

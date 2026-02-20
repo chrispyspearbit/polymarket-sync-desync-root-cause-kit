@@ -19,6 +19,7 @@ import requests
 DEFAULT_RPC = "https://polygon.publicnode.com"
 SELECTOR_MAP = {
     "0x2287e350": "matchOrders",
+    "0x627cdcb9": "incrementNonce",
     "0x6a761202": "redeemPositions?",
 }
 
