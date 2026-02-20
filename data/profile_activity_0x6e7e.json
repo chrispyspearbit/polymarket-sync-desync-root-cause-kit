@@ -1,0 +1,306 @@
+{
+  "profile_url": "https://polymarket.com/@0x6E7E227507569cAead21e5Cd32420197a6297282-1771437664429?via=history",
+  "count": 30,
+  "rows": [
+    {
+      "timestamp": 1771467186,
+      "type": "TRADE",
+      "transactionHash": "0xd774ab8df64f50c3856b0a54bf6324cf4f18176ed2a5d4bb0a56468ffcd0d7b3",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.24,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771467158,
+      "type": "TRADE",
+      "transactionHash": "0xaf231c56d9167de3c41a75169ac354c93a5248ef16aac3f14fbeaa5c0972014f",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771467158,
+      "type": "TRADE",
+      "transactionHash": "0x8a22b68371e9a0fd65d13eb5fcf69bedbb9acf6751d3f1cfcff63659f3a6189f",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 5.76,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771467130,
+      "type": "TRADE",
+      "transactionHash": "0x13d3f1e61ccb51fb7e44f067b90efdd06a46cdde5452175354e6c8622d9f2685",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771467102,
+      "type": "TRADE",
+      "transactionHash": "0x2c2b1c4d6b51f3b9438a233c84c8c4c45decbecbb6ce5d3a35b0a4324980b227",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771467072,
+      "type": "TRADE",
+      "transactionHash": "0x08d12529ea09f8ceb4330a911540dcffbb0aecca065d74b8d784fb2179d167ba",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771467044,
+      "type": "TRADE",
+      "transactionHash": "0x1d0d6ee1960b50f639eb17376cda3cd798aab74d2540831ebf6202431964e13f",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 10.8936,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771467042,
+      "type": "TRADE",
+      "transactionHash": "0xcf574fb1eee8e4fa3679a573c054b528465aa9477004702eca3b0c9da03cd3c0",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771467014,
+      "type": "TRADE",
+      "transactionHash": "0x926e2d138ee37ab48f9e4f8c09d58a12bbd7d5d78c58fe24945887878b91ffc3",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771467014,
+      "type": "TRADE",
+      "transactionHash": "0x4000af13e9444864502626eb8b8b0e428d8a6e775453b6a7e615cfec031a0a60",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466970,
+      "type": "TRADE",
+      "transactionHash": "0x531824f00d652b9f4f8e4e4c84e9ae214a1e9655de00e9411d4f32b006fcc458",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 4.6764,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466872,
+      "type": "TRADE",
+      "transactionHash": "0xaa30a4deea8c90f6160c5a4fc5ba85fb637e01e405a4f4b46917501420ac9f66",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466780,
+      "type": "TRADE",
+      "transactionHash": "0xb495ea6dac6bb8c02d04c54879020d37f1a85f926218c5fe20345b014502cab8",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 18,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466746,
+      "type": "TRADE",
+      "transactionHash": "0x5cab465a9aa17fb4de0fde1538d19f844f898a2425deb017783eaed6158825e9",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466714,
+      "type": "TRADE",
+      "transactionHash": "0xc1b8c0ff6799424204415d2d77a8ebab5149a5503479ff9edd5bb5e437315b26",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466714,
+      "type": "TRADE",
+      "transactionHash": "0x662ec07d9f8c51afef6c804ce82cbb4ae2536d7b1224835868bd2d22cd6926d7",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466714,
+      "type": "TRADE",
+      "transactionHash": "0x6d51b65346a7614caffd167de6a5d221564848f8acbdb3412ac3a54d5fca71ba",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466682,
+      "type": "TRADE",
+      "transactionHash": "0xfc424af7816382b5d66b79dfab2350d5ead9d5fea1ecaa728f9831f20af56b2e",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 57.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466682,
+      "type": "TRADE",
+      "transactionHash": "0xdf29a231e55502b77c238006703798b5581d1cc281c498a33acda0f58fe1d9ea",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466682,
+      "type": "TRADE",
+      "transactionHash": "0xe6c970c8acf98574c8e659c4479abe0d0eb8fe2ac77ffd60fc2c083ad1b2d914",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466652,
+      "type": "TRADE",
+      "transactionHash": "0x84aa643914d839df9a14f2a86b7dbe5f5c7a94978d71582b66a604208437db32",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 23.76,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466652,
+      "type": "TRADE",
+      "transactionHash": "0x968f63f26f40f9413db913a403391ee605226e76ec6c891d742e6cfe59bc01f8",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466590,
+      "type": "TRADE",
+      "transactionHash": "0xedf9937ca7653440f81bb53b49ba5074083de63dc656a823b065c716004f82a8",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 2.4,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466590,
+      "type": "TRADE",
+      "transactionHash": "0xce31a3d0f9ca805740f4c05251ceb35e82c6371e515aaea1682e9ffd30b12a11",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 3.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466590,
+      "type": "TRADE",
+      "transactionHash": "0x604aa8c175ff3cb5ad87c31088f62d2ffc5a04ff94c902f4e8eb645d750cdff0",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466590,
+      "type": "TRADE",
+      "transactionHash": "0x09eb182bdd6ec172d75982fdea350fed29b3c05a68ba7008104de8c6674c7232",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 0.9576,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771466588,
+      "type": "TRADE",
+      "transactionHash": "0x97efa7758663eb474f01d0ba117e88958c7e29bbf4c7006b5f711780916901d1",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Dick Schoof be the next leader out before 2027?",
+      "side": "BUY",
+      "usdcSize": 21.6,
+      "price": 0.12
+    },
+    {
+      "timestamp": 1771460186,
+      "type": "REDEEM",
+      "transactionHash": "0x622c2d38420c92594d48fd585a2f332029aad4983b83d5535c44ff3e4c55d574",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Will Korea win the gold medal for Winter Olympics 2026: Speed Skating ST - Women's 3000m Relay at the 2026 Milano Cortina Winter Olympics?",
+      "side": "",
+      "usdcSize": 16751.78,
+      "price": 0
+    },
+    {
+      "timestamp": 1771458764,
+      "type": "TRADE",
+      "transactionHash": "0x490537c2e32c6bc35a20deb4a7daecc28a1367e633a742ec2f63408e05cb46bc",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Epstein client list released by June 30?",
+      "side": "SELL",
+      "usdcSize": 22,
+      "price": 0.2
+    },
+    {
+      "timestamp": 1771458636,
+      "type": "TRADE",
+      "transactionHash": "0x9b6ff616237a6a609e7d1f26ef2cd396ce8c3fe836d37d1d72e31e9314b68a9e",
+      "proxyWallet": "0x6e7e227507569caead21e5cd32420197a6297282",
+      "title": "Epstein client list released by June 30?",
+      "side": "SELL",
+      "usdcSize": 27.0689,
+      "price": 0.20037678584647273
+    }
+  ]
+}

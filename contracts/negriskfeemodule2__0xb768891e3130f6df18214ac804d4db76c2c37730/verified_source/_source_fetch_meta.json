@@ -1,0 +1,22 @@
+{
+  "address": "0xb768891e3130f6df18214ac804d4db76c2c37730",
+  "url": "https://polygonscan.com/address/0xb768891e3130f6df18214ac804d4db76c2c37730#code",
+  "file_count": 14,
+  "files": [
+    "NegRiskFeeModule.sol",
+    "FeeModule.sol",
+    "IConditionalTokens.sol",
+    "ERC1155.sol",
+    "Auth.sol",
+    "Transfers.sol",
+    "IExchange.sol",
+    "IFeeModule.sol",
+    "Structs.sol",
+    "CalculatorHelper.sol",
+    "IAuth.sol",
+    "TransferHelper.sol",
+    "SafeTransferLib.sol",
+    "ERC20.sol"
+  ],
+  "has_abi": true
+}

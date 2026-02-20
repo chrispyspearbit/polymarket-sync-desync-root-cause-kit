@@ -1,0 +1,7 @@
+{
+  "address": "0x4bfb41d5b3570defd03c39a9a4d8de6bd8b8982e",
+  "chainid": 137,
+  "rpc": "https://polygon.publicnode.com",
+  "bytecode_len_bytes": 17208,
+  "bytecode_keccak256": "0xcfb37c52dfb6f44164b2f25e34239df2dc3ee98727f0fb21f06a3efe56f9d8bf"
+}

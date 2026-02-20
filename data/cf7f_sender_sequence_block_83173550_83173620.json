@@ -1,0 +1,72 @@
+{
+  "rpc_url": "https://polygon.publicnode.com",
+  "contract": "0xb768891e3130f6df18214ac804d4db76c2c37730",
+  "selector": "0x2287e350",
+  "from_address": "0xcf7f5083a0fcd7a3eba791514e6f8fae1b73f26a",
+  "start_block": 83173550,
+  "end_block": 83173620,
+  "only_failed": false,
+  "count": 5,
+  "rows": [
+    {
+      "block": 83173558,
+      "time_utc": "2026-02-19T02:12:20Z",
+      "hash": "0x3ba13ad8e32206409e97ab97f5a26c0e261e483e923faeba431ea51aadb5b80b",
+      "from": "0xcf7f5083a0fcd7a3eba791514e6f8fae1b73f26a",
+      "to": "0xb768891e3130f6df18214ac804d4db76c2c37730",
+      "nonce": 704834,
+      "selector": "0x2287e350",
+      "status": 1,
+      "gas_used": 460572,
+      "tx_index": 126
+    },
+    {
+      "block": 83173567,
+      "time_utc": "2026-02-19T02:12:38Z",
+      "hash": "0xe3e755e169acfe561a0cf17573853d53a0bcd3fa916179b8baa11c2aa2229cc4",
+      "from": "0xcf7f5083a0fcd7a3eba791514e6f8fae1b73f26a",
+      "to": "0xb768891e3130f6df18214ac804d4db76c2c37730",
+      "nonce": 704839,
+      "selector": "0x2287e350",
+      "status": 1,
+      "gas_used": 459145,
+      "tx_index": 116
+    },
+    {
+      "block": 83173568,
+      "time_utc": "2026-02-19T02:12:40Z",
+      "hash": "0xccba4c3668a87228c3cf8a84ea90b2f6893f7833317260ad6ae2b13f14b49362",
+      "from": "0xcf7f5083a0fcd7a3eba791514e6f8fae1b73f26a",
+      "to": "0xb768891e3130f6df18214ac804d4db76c2c37730",
+      "nonce": 704840,
+      "selector": "0x2287e350",
+      "status": 0,
+      "gas_used": 167550,
+      "tx_index": 110
+    },
+    {
+      "block": 83173588,
+      "time_utc": "2026-02-19T02:13:20Z",
+      "hash": "0xf07642b3acba1ca9901a188c3043eba796574b4d60e3c6268109a39108aeff2c",
+      "from": "0xcf7f5083a0fcd7a3eba791514e6f8fae1b73f26a",
+      "to": "0xb768891e3130f6df18214ac804d4db76c2c37730",
+      "nonce": 704852,
+      "selector": "0x2287e350",
+      "status": 1,
+      "gas_used": 577598,
+      "tx_index": 176
+    },
+    {
+      "block": 83173599,
+      "time_utc": "2026-02-19T02:13:42Z",
+      "hash": "0xae99f63182570065bf2c72742bafa1be040d3a448842b390948977b4cac63a20",
+      "from": "0xcf7f5083a0fcd7a3eba791514e6f8fae1b73f26a",
+      "to": "0xb768891e3130f6df18214ac804d4db76c2c37730",
+      "nonce": 704865,
+      "selector": "0x2287e350",
+      "status": 1,
+      "gas_used": 472599,
+      "tx_index": 74
+    }
+  ]
+}
